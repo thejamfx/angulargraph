@@ -20,11 +20,11 @@ export class ChartFactory {
         };
     }
     public createBarChart (data: ChartData): Chart {
-        const ChartType = 'bar';
-        return this.createChart(ChartType, data);
+        const chartType = 'bar';
+        return this.createChart(chartType, data);
     }
     public createLineChart (data: ChartData): Chart {
-        const ChartType = 'Line';
-        return this.createChart(ChartType, data);
+        const chartType = 'Line';
+        return this.createChart(chartType, data);
     }
 }

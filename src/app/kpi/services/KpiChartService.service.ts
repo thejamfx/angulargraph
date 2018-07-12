@@ -24,6 +24,7 @@ export class KpiChartService {
         const targetDataset = {
             label: 'target',
             data: Object.values(data).map((datapoint: any): number => datapoint.target),
+            type: 'line'
         };
         const actualDataset = {
             label: 'actual',

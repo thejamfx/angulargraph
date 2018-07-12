@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
     "@types/chartjs": "0.0.31",
+    "angular-gridster2": "^6.0.5",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "graph.js": "^1.21.1",

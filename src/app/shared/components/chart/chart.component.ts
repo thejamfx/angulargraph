@@ -5,7 +5,7 @@ import { Component, Input, ViewChild, AfterContentInit, ElementRef, OnDestroy } 
 @Component({
   selector: 'chart',
   templateUrl: './chart.component.html',
-  styleUrls: ['./chart.component.css']
+  styleUrls: ['./chart.component.scss']
 })
 export class ChartComponent implements AfterContentInit, OnDestroy {
     public chart: typeof Chart;
