@@ -1,0 +1,6 @@
+.canvas {
+    height: inherit;
+    width: inherit;
+    min-height: 300px;
+    min-width: 470px;
+}

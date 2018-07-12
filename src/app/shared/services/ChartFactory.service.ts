@@ -6,7 +6,18 @@ import { ChartData, Chart } from '../shared.types';
 })
 export class ChartFactory {
     private createChart (type: string, data: ChartData): Chart {
-        return { type, data };
+        return { type, data,
+            options: {
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        };
     }
     public createBarChart (data: ChartData): Chart {
         const ChartType = 'bar';

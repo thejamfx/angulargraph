@@ -5,7 +5,17 @@ export interface Chart {
 }
 
 export interface ChartData {
-    [index: string]: any;
+    labels: string[];
+    datasets: ChartDataSet[];
+}
+
+export interface ChartDataSet {
+    label: string;
+    data: number[];
+    type?: string;
+    backgroundColor?: string[];
+    borderColor?: string[];
+    borderWidth?: number;
 }
 
 export interface ChartOptions {
