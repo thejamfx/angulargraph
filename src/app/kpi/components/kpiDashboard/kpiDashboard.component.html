@@ -1,5 +1,8 @@
-<h1>KPI Dashboard</h1>
-<!-- <chart [chartData]="data"></chart> -->
-<gridster [options]="options">
-    <gridster-item [item]="item" *ngFor="let item of dashboard">hello</gridster-item>
-</gridster>
+<div class="dashboard-container">
+    <h1>KPI Dashboard</h1>
+    <gridster [options]="options">
+        <gridster-item [item]="item" *ngFor="let item of dashboard">
+            <chart [chartData]="data"></chart>
+        </gridster-item>
+    </gridster>
+</div>

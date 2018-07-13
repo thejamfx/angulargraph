@@ -31,9 +31,7 @@ export class KpiDashboardComponent implements OnInit, OnDestroy {
         this.initializeGridster();
         this.dataSubscription = this.kpiService.getKpiData().pipe(
             map((data) => this.kpiChartService.generateChartData(data))
-        ).subscribe((chartData) => {
-            this.data = chartData;
-        });
+        ).subscribe((chartData) => this.data = chartData);
     }
 
     private initializeGridster () {

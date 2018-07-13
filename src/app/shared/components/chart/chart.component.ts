@@ -1,5 +1,5 @@
 import { Chart } from 'chart.js';
-import { Component, Input, ViewChild, AfterContentInit, ElementRef, OnDestroy } from '@angular/core';
+import { Component, Input, ViewChild, AfterContentInit, ElementRef, OnDestroy, AfterViewChecked } from '@angular/core';
 //import { Chart } from '../../shared.types';
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, Input, ViewChild, AfterContentInit, ElementRef, OnDestroy } 
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
-export class ChartComponent implements AfterContentInit, OnDestroy {
+export class ChartComponent implements AfterContentInit, OnDestroy, AfterViewChecked {
     public chart: typeof Chart;
     public readonly canvasWidth = 150;
     public readonly canvasHeight = 100;
@@ -18,5 +18,8 @@ export class ChartComponent implements AfterContentInit, OnDestroy {
     }
     ngOnDestroy () {
         this.chart = null;
+    }
+    ngAfterViewChecked () {
+        this.chart.resize();
     }
 }
