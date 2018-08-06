@@ -4,37 +4,39 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class KpiLoadService {
-    constructor () {}
     public loadData (): any {
         return {
             dp1: {
-                target: 100,
-                actual: 90
+                target: 0,
+                actual: 0
             },
             dp2: {
-                target: 200,
-                actual: 190
+                target: this.numberGenerator(),
+                actual: this.numberGenerator()
             },
             dp3: {
-                target: 300,
-                actual: 290
+                target: this.numberGenerator(),
+                actual: this.numberGenerator()
             },
             dp4: {
-                target: 400,
-                actual: 390
+                target: this.numberGenerator(),
+                actual: this.numberGenerator()
             },
             dp5: {
-                target: 500,
-                actual: 490
+                target: this.numberGenerator(),
+                actual: this.numberGenerator()
             },
             dp6: {
-                target: 600,
-                actual: 590
+                target: this.numberGenerator(),
+                actual: this.numberGenerator()
             },
             dp7: {
-                target: 700,
-                actual: 690
+                target: this.numberGenerator(),
+                actual: this.numberGenerator()
             }
         };
+    }
+    private numberGenerator (): number {
+        return Math.floor(Math.random() * Math.floor(1000));
     }
 }

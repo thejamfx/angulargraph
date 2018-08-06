@@ -13,8 +13,8 @@ export interface ChartDataSet {
     label: string;
     data: number[];
     type?: string;
-    backgroundColor?: string[];
-    borderColor?: string[];
+    backgroundColor?: string|string[];
+    borderColor?: string|string[];
     borderWidth?: number;
 }
 
@@ -24,6 +24,6 @@ export interface ChartOptions {
 
 export interface ChartBarStyle {
     backgroundColor: string;
-    borderColor: string;
-    borderWidth: number;
+    borderColor?: string;
+    borderWidth?: number;
 }
